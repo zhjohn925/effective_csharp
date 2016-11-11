@@ -1,0 +1,11 @@
+The "as" operator is a form of casting:
+
+   1. return bankHashtable[name] as IAccount;
+   2. return (IAccount) bankHashtable[name];
+
+The "as" operator has the advantage that if bankHashtable[name] does not return 
+an account, or returns something of the wrong type, the as operator will generate 
+a null reference.
+
+If a cast fails (i.e. at run time the bank hash table returns the wrong thing) 
+our program will fail with an exception.
